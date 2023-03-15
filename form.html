@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Ozi!</title>
+  <link rel="icon" type="image/svg+xml" href="./img/svg/Ozi_icon.svg">
+  <link rel="icon" type="image/png" href="./img/favicon/Ozi__iconPNG.png">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400&family=Inter&family=Lato:ital,wght@0,300;0,400;1,300&family=Red+Hat+Text:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- header start -->
+        <header class="header">
+            <div class="wrapper">
+
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <a href="#" class="headre__logo-link">
+                            <img src="./img/Ozi_logo.png" width="80" height="80" alt="Welcome to Ozi!">
+                        </a>
+                    </div>
+                    <a class="form__button" href="#">sign in</a>
+                </div>
+
+            </div>
+        </header>
+        <!-- header end -->
+        <main class="main">
+            <section class="intro">
+                <!-- form start -->
+   <div class="wrapper__form">
+    <form class="form">
+        <h2 class="form__title-top">let’s start your</h2>
+        <h1 class="form__title section__title">Registrations</h1>
+        
+        <div class="photo__input">
+            <!-- photo start -->
+            <div class="input__item">
+
+                <div class="container">
+                    <input type="file" id="file" accept="image/*" hidden>
+                    <div class="img-area" data-img="">
+                        <i class='bx bxs-cloud-upload icon'></i>
+                        <h3>Upload Image</h3>
+                        <p>Let's do this<span> now </span></p>
+                    </div>
+                    <button class="select-image">Upload a photo</button>
+                </div>               
+
+            </div>
+            <!-- photo end -->
+
+            <!-- input start -->
+            <div class="input__items">
+
+                <div class="input__item">
+                    <div class="form__group">
+                        <input name="name" class="form__input" placeholder=" ">
+                        <label class="form__label">Name</label>
+                    </div>
+                    
+                    <div class="form__group">
+                        <input name="surname" class="form__input" placeholder=" ">
+                        <label class="form__label">Surname</label>
+                    </div>
+    
+                    <div class="form__group">
+                        <span><input name="city" class="form__input" placeholder=" ">
+                        <label class="form__label mark">City</label></span>
+                        
+                    </div>
+                </div>
+
+                <div class="input__item">
+                    <div class="form__gender">
+
+                        <label class="gender__label">Sex</label>
+                        <div class="form__radio_group">
+                            <label class="radio__lable">
+                                <input type="radio" id="male" value="male" name="sex">
+                                male
+                                <span></span>
+                            </label>
+
+                        </div>
+                        <div class="form__radio_group">
+                            <label class="radio__lable">
+                                <input type="radio" id="female" value="female" name="sex">
+                                female
+                                <span></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <!-- input end -->
+            
+            
+        </div>
+        <!-- date start -->
+        <div class="date__section">
+
+            <div class="date__title">Date of birth</div>
+            <div class="select__date">
+                <p>
+                    <input type="number" step="1" min="1" max="31" id="day" name="day" class="input__time input__day" placeholder="Day"/>
+                </p>
+                <p>
+                    <input type="number" step="1" min="1" max="12" id="day" name="month" class="input__time input__month" placeholder="Month"/>
+                </p>
+                <p>
+                    <input type="number" step="1" min="0" max="2023" id="year" name="year" class="input__time input__year" placeholder="Year"/>
+                </p>
+                <input  class="form__input date__input" type="date" name="Date" id="dateToday">
+            </div>
+            <div class="check__date">
+                <label class="custom-checkbox">
+                    <input type="checkbox" value="value-1">
+                    <span>Hide the date of birth from other users</span>
+                </label>
+            </div>
+        
+        </div>
+        <!-- date end -->
+
+        <!-- input__phone-password start -->
+        <div class="password__section">
+            <div class="input__item inline__in">
+                <div class="form__group new__margin">
+                    <input type="tel" name="phone" class="form__input inline__input" placeholder=" ">
+                    <label class="form__label">Phone or email</label>
+                </div>
+                
+                <div class="form__group new__margin">
+                    <input type="password" name="password" class="form__input inline__input" placeholder=" ">
+                    <label class="form__label">Password</label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- input__phone-password end -->
+
+        <!-- registration__button start -->
+        <dic class="registration__button">
+            <button class="form__button"><span>Register</span></button>
+        </dic>
+
+        <!-- registration__button end -->
+
+        
+</div>
+    
+    </form>
+    <!-- form end -->
+            </section>
+        </main>
+      
+  
+    </body>
+</html>
