@@ -8,15 +8,15 @@ body{
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
-    line-height: 1.2;
-    font-size: 32px;
+    line-height: 1.1;
+    font-size: 26px;
     color: #9e9292d3;
 }
 input{
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 20px;
     color: #877272;
 }
 .mark::after{
@@ -42,7 +42,7 @@ input{
 .section__title::after{
     display: block;
     content: '';
-    width: 500px;
+    width: 380px;
     height: 2px;
     background-color: #DD7979;
     position: absolute;
@@ -210,10 +210,9 @@ input{
     color: #DD7979;
 }
 .form{
-    width: 1218px;
-    padding: 53px 135px;
+    width: 800px;
+    padding: 53px 100px;
     border-radius: 10px;
-    box-shadow: 0 4px 16px #cccc;
     font-family: 'Lato';
     background-color: white;
     box-shadow: 8px 10px 17px rgba(0, 0, 0, 0.25);
@@ -244,13 +243,19 @@ input{
 }
 
 .form__input{
-    width: 420px;
+    width: 260px;
     padding: 0 0 14px 0;
     border: none;
     border-bottom: 2px solid #e0e0e0;
     background-color: transparent;
     outline: none;
     transition: 0.3s;
+}
+.radio__group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
 }
 .inline__in{
     display: flex;
@@ -301,7 +306,7 @@ input{
  .form__group span:last-child::after{
     display: block;
     content: '*This is not a required field to fill in. You can change it later';
-    bottom: -35px;
+    bottom: -45px;
     font-size: 16px;
     line-height: 20px;
     left: 0;
@@ -327,6 +332,7 @@ input{
  .form__radio_group{
     position: relative;
     padding-left: 46px;
+    margin-right: 20px;
  }
  .form__radio_group input[type="radio"]{
     display: none;
@@ -341,8 +347,8 @@ input{
     border: 5px solid #744343;
     display: block;
     position: absolute;
-    left: 0;
-    top: 9px;
+    left: 5px;
+    top: 0;
 }
 .form__radio_group span::after{
     content: " ";
@@ -363,6 +369,9 @@ input{
     display: inline-block;
     vertical-align: middle;
  }
+ .gender__label{
+    margin-right: 20px;
+ }
 /*form end*/
 
 /*date__section start*/
@@ -378,7 +387,7 @@ input{
 }
 
 .date__input{
-    width: 200px;
+    width: 120px;
     max-width: 200px;
 }
 
@@ -455,10 +464,10 @@ input{
     width: 100px;
 }
  .input__month{
-    width: 200px;
+    width: 170px;
  }
  .input__year{
-    width: 150px;
+    width: 130px;
 }
 input[type="number"]:focus {
 	outline: 2px solid #744343;

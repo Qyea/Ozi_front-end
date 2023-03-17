@@ -35,7 +35,7 @@
    <div class="wrapper__form">
     <form class="form">
         <h2 class="form__title-top">let’s start your</h2>
-        <h1 class="form__title section__title">Registrations</h1>
+        <h1 class="form__title section__title">Registration</h1>
         
         <div class="photo__input">
             <!-- photo start -->
@@ -79,21 +79,25 @@
                     <div class="form__gender">
 
                         <label class="gender__label">Sex</label>
-                        <div class="form__radio_group">
-                            <label class="radio__lable">
-                                <input type="radio" id="male" value="male" name="sex">
-                                male
-                                <span></span>
-                            </label>
+                        <div class="radio__group">
+                            <div class="form__radio_group">
+                                <label class="radio__lable">
+                                    <input type="radio" id="male" value="male" name="sex">
+                                    male
+                                    <span></span>
+                                </label>
+    
+                            </div>
+                            <div class="form__radio_group">
+                                <label class="radio__lable">
+                                    <input type="radio" id="female" value="female" name="sex">
+                                    female
+                                    <span></span>
+                                </label>
+                            </div>
 
                         </div>
-                        <div class="form__radio_group">
-                            <label class="radio__lable">
-                                <input type="radio" id="female" value="female" name="sex">
-                                female
-                                <span></span>
-                            </label>
-                        </div>
+                        
                     </div>
                 </div>
                
@@ -133,12 +137,20 @@
             <div class="input__item inline__in">
                 <div class="form__group new__margin">
                     <input type="tel" name="phone" class="form__input inline__input" placeholder=" ">
-                    <label class="form__label">Phone or email</label>
+                    <label class="form__label">Phone</label>
                 </div>
                 
                 <div class="form__group new__margin">
                     <input type="password" name="password" class="form__input inline__input" placeholder=" ">
                     <label class="form__label">Password</label>
+                </div>
+                <div class="form__group new__margin">
+                    <input type="email" name="password" class="form__input inline__input" placeholder=" ">
+                    <label class="form__label"> Repeat the password</label>
+                </div>
+                <div class="form__group new__margin">
+                    <input type="email" name="phone" class="form__input inline__input" placeholder=" ">
+                    <label class="form__label">email</label>
                 </div>
             </div>
         </div>
@@ -160,6 +172,6 @@
             </section>
         </main>
       
-  
+        <script src="./js/main.js"></script>
     </body>
 </html>
