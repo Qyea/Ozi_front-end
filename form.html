@@ -34,7 +34,7 @@
                 <!-- form start -->
    <div class="wrapper__form">
     <form class="form">
-        <h2 class="form__title-top">let’s start your</h2>
+        <h2 class="form__title-top">let's start your</h2>
         <h1 class="form__title section__title">Registration</h1>
         
         <div class="photo__input">
@@ -43,11 +43,11 @@
 
                 <div class="container">
                     <input type="file" id="file" accept="image/*" hidden>
-                    <div class="img-area" data-img="">
-                        <i class='bx bxs-cloud-upload icon'></i>
-                        <h3>Upload Image</h3>
-                        <p>Let's do this<span> now </span></p>
-                    </div>
+		<div class="img-area" data-img="">
+			<i class='bx bxs-cloud-upload icon'></i>
+			<h3>Upload Image</h3>
+			<p>Image size must be less than <span>2MB</span></p>
+		</div>
                     <button class="select-image">Upload a photo</button>
                 </div>               
 
@@ -120,7 +120,7 @@
                 <p>
                     <input type="number" step="1" min="0" max="2023" id="year" name="year" class="input__time input__year" placeholder="Year"/>
                 </p>
-                <input  class="form__input date__input" type="date" name="Date" max="2023" id="dateToday">
+                <input  class="form__input date__input" type="date" name="birthday" max="2023" id="dateToday" >
             </div>
             <div class="check__date">
                 <label class="custom-checkbox">
@@ -141,16 +141,18 @@
                 </div>
                 
                 <div class="form__group new__margin">
-                    <input type="password" name="password" class="form__input inline__input" placeholder=" ">
+                    <input class="form__input inline__input" name="password" type="password" id="myInput" placeholder=" ">
+                    <input type="checkbox" onclick="myFunction()">
                     <label class="form__label">Password</label>
+
                 </div>
                 <div class="form__group new__margin">
-                    <input type="email" name="password" class="form__input inline__input" placeholder=" ">
+                    <input class="form__input inline__input" type="password" id="myInput" placeholder=" ">
                     <label class="form__label"> Repeat the password</label>
                 </div>
                 <div class="form__group new__margin">
-                    <input type="email" name="phone" class="form__input inline__input" placeholder=" ">
-                    <label class="form__label">email</label>
+                    <input type="email" name="email" class="form__input inline__input" placeholder=" ">
+                    <label class="form__label">Email</label>
                 </div>
             </div>
         </div>
@@ -159,19 +161,17 @@
 
         <!-- registration__button start -->
         <dic class="registration__button">
-            <button name="Register" class="form__button get__registratoin"><span>Register</span></button>
+            <button type="submit" name="Register" class="form__button get__registratoin"><span>Register</span></button>
         </dic>
 
         <!-- registration__button end -->
-
-        
 </div>
-    
     </form>
     <!-- form end -->
             </section>
+            
         </main>
-      
         <script src="./js/main.js"></script>
+        
     </body>
 </html>

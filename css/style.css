@@ -106,7 +106,6 @@ input{
 	align-items: center;
 	flex-direction: column;
     text-align: center;
-
 }
 .img-area .icon {
 	font-size: 100px;
@@ -389,7 +388,15 @@ input{
 .date__input{
     width: 140px;
     max-width: 200px;
+
 }
+.date__input::before {
+    content: "Элемент с классом " attr(".input__day");
+  }
+  
+  .date__input::after {
+    content: attr(value);
+  }
 
 .check__date{
     display: flex;
@@ -479,3 +486,4 @@ input[type="number"]:focus {
     display: flex;
     justify-content: center;
 }
+

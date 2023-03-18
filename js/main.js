@@ -25,10 +25,38 @@ inputFile.addEventListener('change', function () {
 		alert("Image size more than 2MB");
 	}
 })
+function myFunction() { 
+    var x = document.getElementById("myInput");
+         if (x.type === "password") {
+            x.type = "text";
+        } 
+     else {      
+         x.type = "password";     
+        }    
+}
 
-document.querySelector(".get__registratoin").addEventListener('click', ()=>{
-    //let data = document.getElementsByName("name").value;
-    //console.log(data);
-    //document.querySelector('.form__label').innerHTML = data;
-    document.querySelector('input[name="name"]').value = 123;
-})
+window.addEventListener('load', function() {
+    document.querySelector('input[type="file"]').addEventListener('change', function() {
+        if (this.files && this.files[0]) {
+            var img = document.querySelector('img');
+            img.onload = () => {
+                URL.revokeObjectURL(img.src);  // no longer needed, free memory
+            }
+
+            img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+        }
+    });
+  });
+
+  const form = document.querySelector('.form');
+form.addEventListener('submit', handleFormSubmit);
+
+function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const data = new FormData(event.target);
+    const formJSON = Object.fromEntries(data.entries());
+
+    console.log(JSON.stringify(formJSON, null, 2));
+} 
+
