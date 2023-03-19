@@ -11,6 +11,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400&family=Inter&family=Lato:ital,wght@0,300;0,400;1,300&family=Red+Hat+Text:wght@500&display=swap" rel="stylesheet">
+    
     </head>
     <body>
         <!-- header start -->
@@ -23,7 +24,7 @@
                             <img src="./img/Ozi_logo.png" width="80" height="80" alt="Welcome to Ozi!">
                         </a>
                     </div>
-                    <a class="form__button" href="#">sign in</a>
+                    
                 </div>
 
             </div>
@@ -33,7 +34,7 @@
             <section class="intro">
                 <!-- form start -->
    <div class="wrapper__form">
-    <form class="form">
+    <form class="form" id="form">
         <h2 class="form__title-top">let's start your</h2>
         <h1 class="form__title section__title">Registration</h1>
         
@@ -59,19 +60,27 @@
 
                 <div class="input__item">
                     <div class="form__group">
-                        <input name="name" class="form__input" placeholder=" ">
+                        <input type="text" id="name" name="name" class="form__input" placeholder=" ">
                         <label class="form__label">Name</label>
+                        <img src="./img/svg/381607_complete_icon.svg" class="fas fa-check-circle">
+                        <img src="./img/svg/381610_incorrect_icon.svg" class="fas fa-exclamation-circle">
+                        <small>Error message</small>
                     </div>
                     
                     <div class="form__group">
-                        <input name="surname" class="form__input" placeholder=" ">
+                        <input type="text" id="surname" name="surname" class="form__input" placeholder=" ">
                         <label class="form__label">Surname</label>
+                        <img src="./img/svg/381607_complete_icon.svg" class="fas fa-check-circle">
+                        <img src="./img/svg/381610_incorrect_icon.svg" class="fas fa-exclamation-circle">
+                        <small>Error message</small>
                     </div>
     
                     <div class="form__group">
-                        <span><input name="city" class="form__input" placeholder=" ">
+                        <span><input type="text" id="city" name="city" class="form__input" placeholder=" ">
                         <label class="form__label mark">City</label></span>
-                        
+                        <img src="./img/svg/381607_complete_icon.svg" class="fas fa-check-circle">
+                        <img src="./img/svg/381610_incorrect_icon.svg" class="fas fa-exclamation-circle">
+                        <small>Error message</small>
                     </div>
                 </div>
 
@@ -136,23 +145,36 @@
         <div class="password__section">
             <div class="input__item inline__in">
                 <div class="form__group new__margin">
-                    <input type="tel" name="phone" class="form__input inline__input" placeholder=" ">
+                    <input type="tel" id="phone" name="phone" class="form__input inline__input" placeholder=" ">
                     <label class="form__label">Phone</label>
+                    <img src="./img/svg/381607_complete_icon.svg" class="fas fa-check-circle">
+                    <img src="./img/svg/381610_incorrect_icon.svg" class="fas fa-exclamation-circle">
+                    <small>Error message</small>
                 </div>
                 
                 <div class="form__group new__margin">
-                    <input class="form__input inline__input" name="password" type="password" id="myInput" placeholder=" ">
-                    <input type="checkbox" onclick="myFunction()">
+                    <input class="form__input inline__input" name="password" type="password" id="password" placeholder=" ">
                     <label class="form__label">Password</label>
+                    <img src="./img/svg/381607_complete_icon.svg" class="fas fa-check-circle">
+                    <img src="./img/svg/381610_incorrect_icon.svg" class="fas fa-exclamation-circle">
+                    <small>Error message</small>
+                    <input type="checkbox" class="checkbox" onclick="myFunction()">
 
                 </div>
+                
                 <div class="form__group new__margin">
-                    <input class="form__input inline__input" type="password" id="myInput" placeholder=" ">
+                    <input class="form__input inline__input" id="password2" type="password" placeholder=" ">
                     <label class="form__label"> Repeat the password</label>
+                    <img src="./img/svg/381607_complete_icon.svg" class="fas fa-check-circle">
+                    <img src="./img/svg/381610_incorrect_icon.svg" class="fas fa-exclamation-circle">
+                    <small>Error message</small>
                 </div>
                 <div class="form__group new__margin">
-                    <input type="email" name="email" class="form__input inline__input" placeholder=" ">
+                    <input type="email" id="email" name="email" class="form__input inline__input" placeholder=" ">
                     <label class="form__label">Email</label>
+                    <img src="./img/svg/381607_complete_icon.svg" class="fas fa-check-circle">
+                    <img src="./img/svg/381610_incorrect_icon.svg" class="fas fa-exclamation-circle">
+                    <small>Error message</small>
                 </div>
             </div>
         </div>
@@ -160,9 +182,13 @@
         <!-- input__phone-password end -->
 
         <!-- registration__button start -->
-        <dic class="registration__button">
+        <div class="registration__button">
             <button type="submit" name="Register" class="form__button get__registratoin"><span>Register</span></button>
-        </dic>
+        </div>
+        <!--<div class="form__account">Already have an account?
+            <a class="form__button" href="#">sign in</a>
+        </div>-->
+        
 
         <!-- registration__button end -->
 </div>

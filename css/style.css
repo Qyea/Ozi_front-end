@@ -218,7 +218,7 @@ input{
     
 }
 .form__button{ 
-    padding: 13px 18px;
+    padding: 14px 18px;
     
     font-weight: 400;
     font-size: 24px;
@@ -272,6 +272,37 @@ input{
 
 .form__input:focus{
     border-bottom: 3px solid #DD7979;
+}
+.form__group.success input{
+    border-color: #2ecc71;
+}
+.form__group.error input{
+    border-color: #e74c3c;
+    margin-bottom: 24px;
+}
+.form__group img{
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+}
+.form__group.success img.fa-check-circle{
+    color:#2ecc71;
+    visibility: visible;
+}
+.form__group.error img.fa-exclamation-circle{
+    color:#e74c3c;
+    visibility: visible;
+}
+.form__group small{
+    visibility: hidden;
+    position: absolute;
+    top: 45px;
+    left: 0;
+}
+.form__group.error small{
+    color:#e74c3c;
+    visibility: visible;
 }
 .form__input:focus ~ .form__label,.form__input:not(:placeholder-shown)~ .form__label{
     top: -20px;
@@ -484,6 +515,15 @@ input[type="number"]:focus {
 
 .registration__button{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 50px;
+}
+.form__account{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-around;
+    margin-bottom: 20px;
 }
 
