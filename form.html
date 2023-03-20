@@ -76,11 +76,8 @@
                     </div>
     
                     <div class="form__group">
-                        <span><input type="text" id="city" name="city" class="form__input" placeholder=" ">
+                        <span class="form__span"><input type="text" id="city" name="city" class="form__input" placeholder=" ">
                         <label class="form__label mark">City</label></span>
-                        <img src="./img/svg/381607_complete_icon.svg" class="fas fa-check-circle">
-                        <img src="./img/svg/381610_incorrect_icon.svg" class="fas fa-exclamation-circle">
-                        <small>Error message</small>
                     </div>
                 </div>
 
@@ -158,16 +155,22 @@
                     <img src="./img/svg/381607_complete_icon.svg" class="fas fa-check-circle">
                     <img src="./img/svg/381610_incorrect_icon.svg" class="fas fa-exclamation-circle">
                     <small>Error message</small>
-                    <input type="checkbox" class="checkbox" onclick="myFunction()">
+                    
 
                 </div>
                 
                 <div class="form__group new__margin">
-                    <input class="form__input inline__input" id="password2" type="password" placeholder=" ">
+                    <input class="form__input inline__input password__input" id="password2" type="password" placeholder=" ">
                     <label class="form__label"> Repeat the password</label>
                     <img src="./img/svg/381607_complete_icon.svg" class="fas fa-check-circle">
                     <img src="./img/svg/381610_incorrect_icon.svg" class="fas fa-exclamation-circle">
                     <small>Error message</small>
+                    <div class="check__date password__check">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="checkbox" onclick="myFunction()"> <span>Show the password</span>
+                        </label>
+                        
+                    </div> 
                 </div>
                 <div class="form__group new__margin">
                     <input type="email" id="email" name="email" class="form__input inline__input" placeholder=" ">

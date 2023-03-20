@@ -333,7 +333,7 @@ input{
  .form__group:last-child{
     margin-bottom: 0;
  }
- .form__group span:last-child::after{
+ .form__group span.form__span:last-child::after{
     display: block;
     content: '*This is not a required field to fill in. You can change it later';
     bottom: -45px;
@@ -510,6 +510,12 @@ input{
 input[type="number"]:focus {
 	outline: 2px solid #744343;
 }
+.password__input{
+    margin-bottom: 20px;
+}
+.password__check{
+    margin-bottom: 0;
+}
 
 /*date__section end*/
 
@@ -526,4 +532,3 @@ input[type="number"]:focus {
     justify-content:space-around;
     margin-bottom: 20px;
 }
-
