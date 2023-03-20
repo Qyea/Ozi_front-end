@@ -26,16 +26,12 @@ function myFunction() {
     var y = document.getElementById("password2");
          if (x.type === "password") {
             x.type = "text";
-        } 
-     else {      
-         x.type = "password";     
-        }    
-        if (y.type === "password") {
             y.type = "text";
         } 
      else {      
-         y.type = "password";     
-        }    
+         x.type = "password"; 
+         y.type = "password";        
+        }      
 }
 
 window.addEventListener('load', function() {
