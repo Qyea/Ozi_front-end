@@ -66,6 +66,7 @@ const city = document.getElementById('city');
 const phone = document.getElementById('phone');
 const password = document.getElementById('password');
 const email = document.getElementById('email');
+const sex = document.getElementById('sex');
 
 form.addEventListener('submit', (e)=>{
     e.preventDefault();
@@ -114,6 +115,7 @@ function checkInputs(){
     }else{
         setSuccessFor(email);
     }
+    
 }
 
 
@@ -127,6 +129,7 @@ function setSuccessFor(input){
     const formControl = input.parentElement; //.form__group
     formControl.className = 'form__group success';
 }
+
 
 //function isEmail(email){
 //  return  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.text(email);

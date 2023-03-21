@@ -83,7 +83,6 @@
 
                 <div class="input__item">
                     <div class="form__gender">
-
                         <label class="gender__label">Sex</label>
                         <div class="radio__group">
                             <div class="form__radio_group">
@@ -101,7 +100,6 @@
                                     <span></span>
                                 </label>
                             </div>
-
                         </div>
                         
                     </div>
@@ -121,12 +119,12 @@
                     <input type="number" step="1" min="1" max="31" id="day" name="day" class="input__time input__day" placeholder="Day"/>
                 </p>
                 <p>
-                    <input type="number" step="1" min="1" max="12" id="day" name="month" class="input__time input__month" placeholder="Month"/>
+                    <input type="number" step="1" min="1" max="12" id="month" name="month" class="input__time input__month" placeholder="Month"/>
                 </p>
                 <p>
-                    <input type="number" step="1" min="0" max="2023" id="year" name="year" class="input__time input__year" placeholder="Year"/>
+                    <input type="number" step="1" min="0" max="2023" id="year" name="year" class="input__time input__year" onclick="BiryhFuc()" placeholder="Year"/>
                 </p>
-                <input  class="form__input date__input" type="date" name="birthday" max="2023" id="dateToday" >
+                <input  class="form__input date__input" type="date" name="birthday" max="2023" id="dateOfBirth" >
             </div>
             <div class="check__date">
                 <label class="custom-checkbox">
@@ -150,7 +148,7 @@
                 </div>
                 
                 <div class="form__group new__margin">
-                    <input class="form__input inline__input" name="password" type="password" id="password" placeholder=" ">
+                    <input class="form__input inline__input " name="password" type="password" id="password" placeholder=" ">
                     <label class="form__label">Password</label>
                     <img src="./img/svg/381607_complete_icon.svg" class="fas fa-check-circle">
                     <img src="./img/svg/381610_incorrect_icon.svg" class="fas fa-exclamation-circle">
@@ -188,9 +186,9 @@
         <div class="registration__button">
             <button type="submit" name="Register" class="form__button get__registratoin"><span>Register</span></button>
         </div>
-        <!--<div class="form__account">Already have an account?
+        <div class="form__account">Already have an account?
             <a class="form__button" href="#">sign in</a>
-        </div>-->
+        </div>
         
 
         <!-- registration__button end -->
