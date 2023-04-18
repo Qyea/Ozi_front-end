@@ -89,7 +89,7 @@ input{
     font-size: 18px;
     line-height: 20px;
 
-    background: #927de6;;
+    background: #B098EE;
     color: white;
     font-family: 'Lato';
     
@@ -100,6 +100,11 @@ input{
     border-radius: 10px;
 
     margin-bottom: 10px;
+}
+.exit__button:hover,
+.exit__button:focus,
+.exit__button:active{
+    background: #927de6
 }
 /*header end*/
 
