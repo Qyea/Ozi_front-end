@@ -1,0 +1,95 @@
+.login {
+    height: 100vh;
+    background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+    url("../../../../img/OziBg.jpg")
+      center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .card {
+      width: 50%;
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      min-height: 600px;
+      overflow: hidden;
+  
+      .left {
+        flex: 1;
+        background-color:rgba(255, 210, 135, 0.65);
+        
+        background-size: cover;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        color: white;
+  
+        h1 {
+          font-size: 100px;
+          line-height: 100px;
+        }
+        p {
+            color:rgba(116, 67, 67, 0.55);
+        }
+  
+        span {
+          font-size: 14px;
+          color:rgba(116, 67, 67, 0.55);
+        }
+        
+        button {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background-color: #DD7979;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+  
+      .right {
+        flex: 1;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        justify-content: center;
+  
+        h1 {
+        color: #744343;
+        }
+       
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          
+          input{
+            width: 260px;
+            padding: 0 0 14px 0;
+            border: none;
+            border-bottom: 2px solid #e0e0e0;
+            background-color: transparent;
+            outline: none;
+            transition: 0.2s;
+        }
+          input:focus{
+            border-bottom: 3px solid #DD7979;
+        }
+          
+          button {
+            width: 50%;
+            padding: 10px;
+            border: none;
+            background-color: #938eef;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }

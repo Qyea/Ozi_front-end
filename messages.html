@@ -16,7 +16,7 @@
     
     </head>
     <body>
-        <header class="header__home">
+        <!--<header class="header__home">
             <div class="wrapper">
 
                 <div class="header__wrapper">
@@ -42,14 +42,25 @@
 
                 </div>
 
-            </div>
-        </header>
+            </div> 
+        </header>-->
         <!-- header end -->
-        <section class="intro">
-            
-        </section>
-        <main>
+       
+            <div class='chat'>
+                <div class='chat-messages'>
+                    <div class='chat-messages__content' id='messages'>
+                        Загрузка...
+                    </div>
+                </div>
+               
+                
+                <div class='chat-input'>
+                    <form method='post' id='chat-form'>
+                        <input type='text' id='message-text' class='chat-form__input' placeholder='Введите сообщение'> <input type='submit' class='chat-form__submit' value='=>'>
+                    </form>
+                </div>
+            </div>
 
-        </main>
     </body>
+    <script src="./js/messages.js"></script>
 </html>
