@@ -413,7 +413,7 @@ body.dark .switch::before{
 	display: block;
 	width: 100%;
 	padding: 16px 0;
-	border-radius: 15px;
+	border-radius: 10px;
 	background: #DD7979;
 	color: #fff;
 	font-weight: 500;
@@ -1072,24 +1072,24 @@ margin-bottom: 20px;
     border-bottom: 3px solid #DD7979;
 }
 .form__group.success input{
-    border-color: #2ecc71;
+    border-color: #64ed9d;
 }
 .form__group.error input{
-    border-color: #e74c3c;
+    border-color: #B098EE;
     margin-bottom: 24px;
 }
-.form__group img{
+.form__group i{
     visibility: hidden;
     position: absolute;
     top: 0px;
     right: 20px;
 }
-.form__group.success img.fa-check-circle{
-    color:#2ecc71;
+.form__group.success i.fa-check-circle{
+    color:#64ed9d;
     visibility: visible;
 }
-.form__group.error img.fa-exclamation-circle{
-    color:#e74c3c;
+.form__group.error i.fa-exclamation-circle{
+    color:#B098EE;
     visibility: visible;
 }
 .form__group small{
@@ -1099,7 +1099,7 @@ margin-bottom: 20px;
     left: 0;
 }
 .form__group.error small{
-    color:#e74c3c;
+    color:#B098EE;
     visibility: visible;
 }
 .form__input:focus ~ .form__label,.form__input:not(:placeholder-shown)~ .form__label{
