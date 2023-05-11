@@ -104,13 +104,22 @@
                                     </div>
                                     <div class="form__ex__container">
                                         <div class="form__ex__input-items">
-                                            <input type="text" class="form__ex__input" placeholder="phone or mail">
-                                            <div class="check__date">
-                                                <label class="custom-checkbox">
-                                                    <input type="checkbox" value="remember">
-                                                    <span>remember me</span>
-                                                </label>
-                                            </div>
+                                           
+                                            <div class="form__container">
+                                                <div class="form__input-items">
+                                                    <input type="text" class="form__ex__input" placeholder="phone or mail">
+                                                    <input type="password" class="form__ex__input" id="password" type="password" placeholder="enter your password">
+                                                
+                                                    <div class="check__date">
+                                                        <label class="custom-checkbox">
+                                                            <input type="checkbox" class="checkbox" onclick="myFunction()"> <span>Show the password</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            
+                                        </div>
+                                        <div class="forgot__title">
+                                            <a class="forget__password" href="#!">forgot the password?</a>
                                         </div>
                                     </div>
                                         <div class="form__ex__buttons">
@@ -162,4 +171,5 @@
             </div>
         </footer>
     </body>
+    <script src="./js/main.js"></script>
 </html>

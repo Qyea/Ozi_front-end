@@ -23,14 +23,22 @@ inputFile.addEventListener('change', function () {
 })
 function myFunction() { 
     var x = document.getElementById("password");
-    var y = document.getElementById("password2");
+    var y;
+    if(document.getElementById("password2")){
+        y = document.getElementById("password2");
+    }
          if (x.type === "password") {
             x.type = "text";
-            y.type = "text";
+            if(document.getElementById("password2")){
+                y.type = "text";
+            }
+           
         } 
      else {      
          x.type = "password"; 
-         y.type = "password";        
+         if(document.getElementById("password2")){
+            y.type = "password"; 
+            }     
         }      
 }
 
