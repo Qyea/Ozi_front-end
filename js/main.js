@@ -2,6 +2,47 @@ const selectImage = document.querySelector('.select-image');
 const inputFile = document.querySelector('#file');
 const imgArea = document.querySelector('div.img-area');
 
+const buttons = document.getElementsByClassName("change-status");
+
+for (let i = 0; i < buttons.length; i++) {
+    const button = buttons[i];
+    button.addEventListener("click", function() {
+        const friendId = button.getAttribute("data-friend-id");
+
+        const currentStatus = button.innerText;
+
+        let newStatus;
+        if (currentStatus === "add a friend") {
+            newStatus = "cancel a request";
+            button.innerText = "cancel a request";
+        } else if (currentStatus === "remove friend") {
+            newStatus = "add a friend";
+            button.innerText = "add a friend";
+        } else if (currentStatus === "cancel a request") {
+            newStatus = "add a friend";
+            button.innerText = "add a friend";
+        } else if (currentStatus === "accept a request") {
+            newStatus = "remove friend";
+            button.innerText = "remove friend";
+        }
+
+        fetch("/changeFriendStatus", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                friendId: friendId,
+                newStatus: newStatus
+            })
+        })
+        .catch(error => {
+            console.error("Ошибка при изменении статуса друга:", error);
+            button.innerText = currentStatus;
+        });
+    });
+}
+
 selectImage.addEventListener('click', function () {
 	inputFile.click();
 })
@@ -139,6 +180,3 @@ function setSuccessFor(input){
 }
 
 
-//function isEmail(email){
-//  return  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.text(email);
-//}
