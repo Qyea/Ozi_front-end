@@ -2156,6 +2156,7 @@ color: #FFFFFF;
 .people{
     max-height: 600px;
     overflow-y: scroll;
+    padding-right: 30px;
 }
 #element::-webkit-scrollbar {
     width: 10px;
@@ -2227,7 +2228,11 @@ color: #FFFFFF;
     justify-content: space-between;
     overflow-y: auto;
     margin-bottom: 20px;
-    padding-right: 30px;
+    padding: 5px 10px;
+}
+.user__info:hover{
+    background-color: #ffe0a6;
+    border-radius: 10px;
 }
 .start__info{
     display: flex;
