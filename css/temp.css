@@ -2238,3 +2238,19 @@ color: #FFFFFF;
     text-decoration: none;
 }
 /*search end*/
+
+/*friens start*/
+.friends__window{
+    width: 600px;
+    padding: 25px 37px;
+    overflow: auto;
+
+    border-radius: 20px;
+
+    font-family: 'Lato';
+    background-color: white;
+
+    box-shadow: 8px 10px 17px rgba(0, 0, 0, 0.25);
+}
+
+/*friens end*/
