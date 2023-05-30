@@ -14,22 +14,22 @@
 
             <div class="header__item">
                 <div class="header__logo">
-                    <a href="http://localhost:8080/ozi_war_exploded/ozi" class="headre__logo-link">
-                        <img src="./img/Ozi_logo.png" width="80" height="80" alt="Welcome to Ozi!">
+                    <a href="/ozi" class="headre__logo-link">
+                        <img src="${pageContext.request.contextPath}/img/Ozi_logo.png" width="80" height="80" alt="Welcome to Ozi!">
                     </a>
                 </div>
             </div>
             <div class="header__item">
                 <div class="search-box">
                     <input type="text" name="" class="search-txt" placeholder="Type to search"/>
-                    <a class="search-btn" href="http://localhost:8080/ozi_war_exploded/search.jsp">
+                    <a class="search-btn" href="#">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
             <div class="header__item">
-                <form method="post" action="http://localhost:8080/ozi_war_exploded/logout">
-                    <button class="exit__button" name="logout">Exit</button>
+                <form method="post">
+                    <button class="exit__button" name="exit" id="exit" value="1" >Exit</button>
                 </form>
             </div>
 

@@ -13,7 +13,7 @@
       <div class="header__wrapper">
         <div class="header__logo">
           <a href="#" class="headre__logo-link">
-            <img src="./img/Ozi_logo.png" width="80" height="80" alt="Welcome to Ozi!">
+            <img src="${pageContext.request.contextPath}/img/Ozi_logo.png" width="80" height="80" alt="Welcome to Ozi!">
           </a>
         </div>
       </div>

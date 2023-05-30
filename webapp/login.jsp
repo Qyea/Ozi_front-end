@@ -11,10 +11,10 @@
     <head>
         <meta charset="UTF-8">
   <title>Welcome to Ozi!</title>
-  <link rel="icon" type="image/svg+xml" href="./img/svg/Ozi_icon.svg">
-  <link rel="icon" type="image/png" href="./img/favicon/Ozi__iconPNG.png">
+  <link rel="icon" type="image/svg+xml" href="${pageContext.request.contextPath}/img/svg/Ozi_icon.svg">
+  <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/img/favicon/Ozi__iconPNG.png">
   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="css/temp.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/temp.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400&family=Inter&family=Lato:ital,wght@0,300;0,400;1,300&family=Red+Hat+Text:wght@500&display=swap" rel="stylesheet">
@@ -93,10 +93,10 @@
                             </div>
 
                             <div class="benif__item">
-                                <form class="form__ex" id="form" action="/ozi_war_exploded/loginServlet" method="POST">
+                                <form class="form__ex" id="form" action="/ozi/login" method="POST">
                                     <div class="form__ex__container">
                                         <div class="form__ex__logo">
-                                            <img src="./img/svg/Untitled-2.png" width="80" height="80" alt="Welcome to Ozi!">
+                                            <img src="${pageContext.request.contextPath}/img/svg/Untitled-2.png" width="80" height="80" alt="Welcome to Ozi!">
                                         </div>
                                     </div>
                                     <div class="form__ex__container">
@@ -124,7 +124,7 @@
                                     </div>
                                         <div class="form__ex__buttons">
                                             <button class="form__ex__button btn__1"><span>sign in</span></button>
-                                            <a href="http://localhost:8080/ozi_war_exploded/register.jsp"
+                                            <a href="http://localhost:8080/ozi/register"
                                                class="form__ex__button btn__2" ><span>sign up</span></a>
                                         </div>
                                         
