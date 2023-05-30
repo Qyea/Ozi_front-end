@@ -10,14 +10,16 @@
 <head>
 </head>
 <body>
-
         <div class="user__info-row">
             <div class="user__item">
                 <div class="user__info-row-container">
                     <div class="user__info-row-in">
                         <div class="user__info-row-friends">
                             <span class="user__info-row-value">
-                                <a href="#" class="user__link-info js-search">${friends}</a>
+                                <form method="post">
+                                   <button type="submit"  id="friend" name="friend" value="1"
+                                            class="user__link-info statistics__button">${friends}</button>
+                                </form>
                             </span>
                         </div>
                     </div>
@@ -31,7 +33,10 @@
                     <div class="user__info-row-in">
                         <div class="user__info-row-followers">
                             <span class="user__info-row-value">
-                                <a href="#" class="user__link-info js-search">${followers}</a>
+                                <form method="post">
+                                <button type="submit"  id="follower" name="follower" value="1"
+                                        class="user__link-info statistics__button">${followers}</button>
+                                </form>
                             </span>
                         </div>
                     </div>
@@ -84,6 +89,7 @@
             </div>
 
         </div>
+
 
 </body>
 </html>

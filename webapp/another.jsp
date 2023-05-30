@@ -1,20 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page import="by.fpmibsu.ozi.entity.Post" %>
+<%@ page import="java.util.List" %>
+<%@ page import="by.fpmibsu.ozi.dao.PostDao" %>
+<%@ page import="java.util.Collections" %>
+<%@ page import="java.util.Comparator" %>
+<%@ page import="by.fpmibsu.ozi.services.Status" %><%--
+  Created by IntelliJ IDEA.
+  User: User
+  Date: 28.05.2023
+  Time: 10:40
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ozi!</title>
-  
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="icon" type="image/svg+xml" href="./img/svg/Ozi_icon.svg">
-  <link rel="icon" type="image/png" href="./img/favicon/Ozi__iconPNG.png">
-  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="css/temp.css">
+        <title>Ozi!</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/svg+xml" href="${pageContext.request.contextPath}/img/svg/Ozi_icon.svg">
+        <link rel="icon" type="image/png" href="${pageContext.request.contextPath}/img/favicon/Ozi__iconPNG.png">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400&family=Inter&family=Lato:ital,wght@0,300;0,400;1,300&family=Red+Hat+Text:wght@500&display=swap" rel="stylesheet">
-    
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400&family=Inter&family=Lato:ital,wght@0,300;0,400;1,300&family=Red+Hat+Text:wght@500&display=swap" rel="stylesheet">
+
+        <!-- подключение общего CSS-файла -->
+        <link rel="stylesheet" href="./css/temp.css">
     </head>
     <body>
         <!-- header start -->
@@ -41,7 +51,19 @@
                             <!-- interaction__parth start --> 
                 <div class="interaction__parth">
                     <div class="status">
-                        <button class="friend__button">add a friend</button> 
+                        <%
+                            String statusText = "";
+                            String st = (String)request.getAttribute("status");
+                            if (st == Status.REQUEST_SEND.toString()) statusText = "Accept request";
+                            else if (st == Status.FRIEND.toString()) statusText = "Remove from friends";
+                            else if (st == Status.FOLLOWER.toString()) statusText = "Unfollow";
+                            else statusText = "Add to friends";
+                            request.setAttribute("statusText", statusText);
+                            request.setAttribute("pageId", request.getParameter("pageId"));
+                        %>
+                        <form method = "post" action="/ozi/editFriends?pageId=${pageId}&status=${status}">
+                        <button class="friend__button" name="statusButton" value="${st}" >${statusText}</button>
+                        </form>
                     </div>
                 </div>
                 <!-- interaction__parth end --> 
@@ -51,8 +73,8 @@
                                 <div class="panel__item">
                                     <div class="panel">
                                         <div class="user__panel">
-                                            <p class="user__name">Anastasia Krech</p>
-                                            <p class="user__status">I love Ozi</p>
+                                            <p class="user__name">${name} ${surname}</p>
+                                            <p class="user__status">${about}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -67,7 +89,7 @@
                                                 <div class="user__atributies-row-in">
                                                     <div class="user__atributies-row-datebirth">
                                                         <span class="user__atributies-row-value">
-                                                            <a href="#" class="user__link js-serch">February 3, 2004</a>  
+                                                            <a href="#" class="user__link js-serch">${birthday}</a>
                                                         </span>
                                                     </div>
                                                 </div>
@@ -95,87 +117,13 @@
                                                 <div class="user__atributies-row-in">
                                                     <div class="user__atributies-row-city">
                                                         <span class="user__atributies-row-value">
-                                                            <a href="#" class="user__link js-serch">Minsk</a>  
+                                                            <a href="#" class="user__link js-serch">${city}</a>
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="statistics">
-                                            <div class="user__info-row">
-                                                <div class="user__item">
-                                                    <div class="user__info-row-container">
-                                                        <div class="user__info-row-in">
-                                                            <div class="user__info-row-friends">
-                                                                <span class="user__info-row-value">
-                                                                    <a href="#" class="user__link-info js-search">110</a>  
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="user__info-row-lable">
-                                                            Friends
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="user__item">
-                                                    <div class="user__info-row-container">
-                                                        <div class="user__info-row-in">
-                                                            <div class="user__info-row-followers">
-                                                                <span class="user__info-row-value">
-                                                                    <a href="#" class="user__link-info js-search">89</a>  
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="user__info-row-lable">
-                                                            followers
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="user__item">
-                                                    <div class="user__info-row-container">
-                                                        <div class="user__info-row-in">
-                                                            <div class="user__info-row-Communities">
-                                                                <span class="user__info-row-value">
-                                                                    <a href="#" class="user__link-info js-search">30</a>  
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="user__info-row-lable">
-                                                            Communities
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="user__item">
-                                                    <div class="user__info-row-container">
-                                                        <div class="user__info-row-in">
-                                                            <div class="user__info-row-photos">
-                                                                <span class="user__info-row-value">
-                                                                    <a href="#" class="user__link-info js-search">3</a>  
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="user__info-row-lable">
-                                                            photos
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="user__item">
-                                                    <div class="user__info-row-container">
-                                                        <div class="user__info-row-in">
-                                                            <div class="user__info-row-music">
-                                                                <span class="user__info-row-value">
-                                                                    <a href="#" class="user__link-info js-search">98</a>  
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="user__info-row-lable">
-                                                            music
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                              
-                                            </div>
-                                        </div>    
+                                        <jsp:include page="components/statistics.jsp"/>
                                          
                                     </div>
                                 </div>
@@ -197,65 +145,69 @@
                                 </div>
                                 <div class="tools">
                                     <div class="text-field">
-                                        
-                                      </div>
+
+                                    </div>
                                 </div>
                             </div>
+                            <%
+                                Integer userId;
+                                try {
+                                    String str = request.getParameter("pageId");
+                                    if (str == null)
+                                    {
+                                        userId = null;
+                                    }
+                                    else userId = Integer.parseInt(str);
+                                }
+                                catch (NumberFormatException e)
+                                {
+                                    userId = null;
+                                }
+                                if (userId == null) userId = (Integer) session.getAttribute("userId");
+                                PostDao postDao = new PostDao();
+                                List<Post> posts = postDao.findAllByUserId(userId);
+                                Collections.sort(posts, Comparator.comparing(Post::getDate).reversed());
+
+                            %>
                             <div class="post__panel">
                                 <div class="post__container">
+                                    <% for (Post post : posts) { %>
                                     <div class="post">
                                         <div class="time__place">
-                                            <div class="post__time date">Today</div>
+                                            <div class="post__time date">
+                                                <% session.setAttribute("date",post.getDate()); %>
+                                                ${date}
+                                            </div>
                                         </div>
-                        
+
                                         <div class="post__card">
                                             <div class="post__info">
                                                 <div class="post__pic">
-                                                    <img class="post__picture" src="img/Dva.jpg" width="65" height="65">
+                                                    <img class="post__picture" src="img/Ozi.png" width="65" height="65">
                                                 </div>
                                                 <div class="post__plot">
                                                     <div class="name__time">
-                                                        <div class="post__name">Anastasia Krech</div>
-                                                        <div class="post__time">12:05</div>
+                                                        <div class="post__name">
+                                                            <% session.setAttribute("user",post.getUser().getName() +
+                                                                    " " + post.getUser().getSurname() ); %>
+                                                            ${user}
+                                                        </div>
                                                     </div>
                                                     <div class="post__text">
-                                                        Who hasn't had photos for a long time?
+                                                        <% session.setAttribute("text",post.getText()); %>
+                                                        ${text}
                                                     </div>
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="post">
-                                        <div class="time__place">
-                                            <div class="post__time date">Monday, february 15nd</div>
-                                        </div>
-                        
-                                        <div class="post__card">
-                                            <div class="post__info">
-                                                <div class="post__pic">
-                                                    <img class="post__picture" src="img/Dva.jpg" width="65" height="65">
-                                                </div>
-                                                <div class="post__plot">
-                                                    <div class="name__time">
-                                                        <div class="post__name">Anastasia Krech</div>
-                                                        <div class="post__time">12:05</div>
-                                                    </div>
-                                                    <div class="post__text">
-                                                        Who hasn't had photos for a long time?
-                                                    </div>
-                                                </div>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    <% } %>
                                 </div>
+                            </div>
+
                         </div>
-                        
                     </div>
-                </div>  
                 </div>
                 <!-- posts end -->
             </section>
